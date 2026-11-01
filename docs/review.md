@@ -5,6 +5,8 @@
 | Family names, sub-family list and priorities | UAE IA Regulation v1.1 (TDRA, March 2020) | **not yet reviewed** | — | — |
 | Sub-family → ISO/IEC 27001:2022 mappings (crosswalk overlay) | as above | **not yet reviewed** (tracked in the crosswalk's [review.md](https://github.com/bizidwassim-design/grc-control-crosswalk/blob/main/docs/review.md)) | — | — |
 
+**Maintainer review:** Wassim Bizid is the editor and reviewer of all content (scope, sources, mappings and what is published). That is a maintainer review, not an independent one.
+
 No independent review has been done yet. Nothing in this repository should be read as reviewed until a reviewer,
 a date and a result are recorded in this table.
 

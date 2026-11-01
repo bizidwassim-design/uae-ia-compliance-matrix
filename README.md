@@ -153,6 +153,13 @@ text and any assessment obligation are defined by the issuing authority. Use the
 and your evidence; it does not replace the standard, an accredited assessment or professional advice. All sample
 data is fictional.
 
+## AI assistance
+
+Built with Claude Code as a coding and writing assistant, which is why it appears as a co-author on some commits.
+**Editor and reviewer: Wassim Bizid**, who set the scope, the frameworks and the GRC approach, edited the content
+and decided what was published. Automated tests in CI check the published outputs. This is a maintainer review,
+not an independent one.
+
 ## License
 
 [MIT](LICENSE): free to use, copy, modify and redistribute.
