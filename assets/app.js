@@ -4,6 +4,7 @@
 
   var CAT = window.UAE_IA, SAMPLE = window.UAE_IA_SAMPLE;
   var STORAGE = "uae-ia-matrix-draft";
+  var BLANK_KEY = "uae-ia-matrix-blank";
   var SCHEMA = "uae-ia-compliance-matrix/1.0";
   var MAX_SCORE = 4;
 
@@ -266,7 +267,12 @@
 
     $("#btn-sample").addEventListener("click", function () {
       state = JSON.parse(JSON.stringify({ organisation: SAMPLE.organisation, assessment_date: SAMPLE.assessment_date, assessor: SAMPLE.assessor, items: SAMPLE.items, controls: [] }));
-      save(); renderAll(); say("Sample loaded: " + SAMPLE.organisation + " (fictional).");
+      save(); renderAll(); say("Sample loaded: " + SAMPLE.organisation + " (fictional)."); $("#demo-banner").hidden = false;
+    });
+    $("#btn-start-blank").addEventListener("click", function () {
+      state = { organisation: "", assessment_date: "", assessor: "", items: {}, controls: [] };
+      try { localStorage.removeItem(STORAGE); localStorage.setItem(BLANK_KEY, "1"); } catch (e) { /* ignore */ }
+      $("#demo-banner").hidden = true; renderAll(); say("Blank matrix: set a status for each family to build your own results.");
     });
     $("#btn-export").addEventListener("click", function () {
       var doc = exportDoc(); download("uae-ia-matrix-" + slug(doc.organisation) + "-" + (doc.assessment_date || "undated") + ".json", JSON.stringify(doc, null, 2)); say("JSON exported.");
@@ -285,7 +291,8 @@
     $("#btn-print").addEventListener("click", function () { window.print(); });
     $("#btn-reset").addEventListener("click", function () {
       state = { organisation: "", assessment_date: "", assessor: "", items: {}, controls: [] };
-      try { localStorage.removeItem(STORAGE); } catch (e) { /* ignore */ }
+      try { localStorage.removeItem(STORAGE); localStorage.setItem(BLANK_KEY, "1"); } catch (e) { /* ignore */ }
+      $("#demo-banner").hidden = true;
       renderAll(); say("Matrix reset.");
     });
     var saved = null; try { saved = localStorage.getItem("uae-ia-theme"); } catch (e) { /* ignore */ }
@@ -295,7 +302,10 @@
       var dark = cur === "dark" || (!cur && window.matchMedia("(prefers-color-scheme: dark)").matches);
       var next = dark ? "light" : "dark"; try { localStorage.setItem("uae-ia-theme", next); } catch (e) { /* ignore */ } applyTheme(next);
     });
-    if (/[?&]sample=1/.test(location.search) && !Object.keys(state.items).length) $("#btn-sample").click(); else renderAll();
+    var blank = false; try { blank = localStorage.getItem(BLANK_KEY) === "1"; } catch (e) { /* ignore */ }
+    var empty = !Object.keys(state.items).length;
+    /* first visit opens on the fictional sample so the summary, bars and gaps show real-looking results */
+    if (empty && (/[?&]sample=1/.test(location.search) || !blank)) $("#btn-sample").click(); else renderAll();
   }
   document.addEventListener("DOMContentLoaded", init);
 })();
