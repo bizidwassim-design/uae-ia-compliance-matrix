@@ -143,7 +143,7 @@
     var pct = applicable ? Math.round((sum / (applicable * MAX_SCORE)) * 100) : 0;
     var implemented = counts.done + counts.ver;
     var kp = $("#kpis"); kp.textContent = "";
-    [["Compliance score", pct + "%", "weighted by status, " + applicable + " applicable"],
+    [[state.controls.length ? "Self-assessed score · control level" : "Self-assessed score · family level", pct + "%", "weighted by status, " + applicable + " applicable · indicative, not an audit result"],
      ["Implemented", implemented + " / " + applicable, "implemented or verified"],
      ["Partially implemented", String(counts.part), "in progress"],
      ["Not started or planned", String(counts.none + counts.plan), "open"],

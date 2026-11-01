@@ -5,6 +5,9 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+- The headline score is labelled *Self-assessed score · family level* (or *control level* once controls are imported) and marked as indicative, not an audit result.
+
 ### Added
 - *Work at the 66 IAR v1.1 sub-families*: the regulation's sub-families with priorities and mappings (`data/subfamilies.js`, generated).
 - Snapshots of the crosswalk data the matrix depends on: `data/iar-v1.1-subfamilies.csv`, `data/iso27001-to-nist-csf.csv`.
