@@ -1,7 +1,7 @@
 {
   "schema": "uae-ia-compliance-matrix/1.0",
-  "framework": "UAE Information Assurance Standard",
-  "catalogue": "families-1.0",
+  "framework": "UAE Information Assurance Regulation v1.1 (TDRA, March 2020)",
+  "catalogue": "families-1.1",
   "organisation": "Falcon Bay Logistics FZ-LLC",
   "assessment_date": "2026-10-20",
   "assessor": "Information security manager",

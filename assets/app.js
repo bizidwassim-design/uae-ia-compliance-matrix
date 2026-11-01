@@ -269,6 +269,12 @@
       state = JSON.parse(JSON.stringify({ organisation: SAMPLE.organisation, assessment_date: SAMPLE.assessment_date, assessor: SAMPLE.assessor, items: SAMPLE.items, controls: [] }));
       save(); renderAll(); say("Sample loaded: " + SAMPLE.organisation + " (fictional)."); $("#demo-banner").hidden = false;
     });
+    $("#btn-subfamilies").addEventListener("click", function () {
+      var subs = window.UAE_IA_SUBFAMILIES || [];
+      if (!subs.length) { say("Sub-family catalogue not available."); return; }
+      state.controls = subs.map(function (c) { return { id: c.id, title: c.title, description: c.description, priority: c.priority, iso: c.iso, csf: c.csf }; });
+      save(); renderAll(); say(subs.length + " IAR v1.1 sub-families loaded. Family rows stay as headings; scoring now uses the sub-families.");
+    });
     $("#btn-start-blank").addEventListener("click", function () {
       state = { organisation: "", assessment_date: "", assessor: "", items: {}, controls: [] };
       try { localStorage.removeItem(STORAGE); localStorage.setItem(BLANK_KEY, "1"); } catch (e) { /* ignore */ }

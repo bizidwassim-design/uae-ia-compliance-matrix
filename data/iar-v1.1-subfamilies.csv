@@ -1,0 +1,67 @@
+ref,title,family,iso27001_2022,iso27001_clauses,confidence,priority
+M1.1,Entity Context and Leadership,M1 Strategy and Planning,A.5.2; A.5.4,4.1; 4.2; 4.3; 5.1; 5.3,high,P1
+M1.2,Information Security Policy,M1 Strategy and Planning,A.5.1,5.2,high,P1; P2
+M1.3,Organization of Information Security,M1 Strategy and Planning,A.5.2; A.5.5; A.5.6; A.5.19; A.5.20; A.6.6,,medium,P1; P2; P4
+M1.4,Support,M1 Strategy and Planning,A.5.37,7.1; 7.4; 7.5,high,P1; P2
+M2.1,Information Security Risk Management Policy,M2 Information Security Risk Management,A.5.1,6.1.1,medium,P1
+M2.2,Information Security Risk Assessment,M2 Information Security Risk Management,,6.1.2; 8.2,high,P1
+M2.3,Information Security Risk Treatment,M2 Information Security Risk Management,,6.1.3; 6.2; 8.3,high,P1; P2
+M2.4,Ongoing Information Security Risk Management,M2 Information Security Risk Management,,7.4; 8.2; 9.1,medium,P1
+M3.1,Awareness and Training Policy,M3 Awareness and Training,A.5.1; A.6.3,,high,P2
+M3.2,Awareness and Training Planning,M3 Awareness and Training,A.6.3,7.2; 7.3,high,P2
+M3.3,Security Training,M3 Awareness and Training,A.6.3,7.2,high,P1; P2; P3
+M3.4,Security Awareness,M3 Awareness and Training,A.6.3,7.3,high,P2
+M4.1,Human Resources Security Policy,M4 Human Resources Security,A.5.1; A.6.1; A.6.2,,medium,P2
+M4.2,Prior to Employment,M4 Human Resources Security,A.6.1; A.6.2,,high,P2
+M4.3,During Employment,M4 Human Resources Security,A.5.4; A.6.4,,high,P2
+M4.4,Termination or Change of Employment,M4 Human Resources Security,A.5.11; A.5.18; A.6.5,,high,P1
+M5.1,Compliance Policy,M5 Compliance,A.5.31; A.5.36,,medium,P2
+M5.2,Compliance with Information Security Legal Requirements,M5 Compliance,A.5.10; A.5.31; A.5.32; A.5.33; A.5.34,,medium,P2; P3; P4
+M5.3,Compliance with non-technical requirements,M5 Compliance,A.5.36,,high,P4
+M5.4,Compliance with technical requirements,M5 Compliance,A.5.36; A.8.8,,medium,P2
+M5.5,Information Systems Audit Considerations,M5 Compliance,A.8.34,9.2,high,P4
+M6.1,Performance Evaluation Policy,M6 Performance Evaluation and Improvement,A.5.1,9.1,medium,P3
+M6.2,Performance Evaluation,M6 Performance Evaluation and Improvement,A.5.35,9.1; 9.2,high,P2
+M6.3,Improvement,M6 Performance Evaluation and Improvement,,10.1; 10.2,high,P2
+T1.1,Asset Management Policy,T1 Asset Management,A.5.1; A.5.9,,medium,P2
+T1.2,Responsibility for Assets,T1 Asset Management,A.5.9; A.5.10; A.8.1,,high,P2
+T1.3,Information Classification,T1 Asset Management,A.5.10; A.5.12; A.5.13,,high,P3
+T1.4,Media Handling,T1 Asset Management,A.7.10; A.7.14,,high,P1; P2
+T2.1,Physical and Environmental Security Policy,T2 Physical and Environmental Security,A.5.1; A.7.1,,medium,P4
+T2.2,Secure Areas,T2 Physical and Environmental Security,A.7.1; A.7.2; A.7.3; A.7.5; A.7.6,,high,P2; P3; P4
+T2.3,Equipment Security,T2 Physical and Environmental Security,A.7.7; A.7.8; A.7.9; A.7.11; A.7.12; A.7.13; A.7.14; A.8.1,,high,P2; P3; P4
+T3.1,Operations Management Policy,T3 Operations Management,A.5.1; A.5.37,,medium,P4
+T3.2,Operational Procedures and Responsibilities,T3 Operations Management,A.5.3; A.5.37; A.8.9; A.8.31; A.8.32,,high,P2; P3; P4
+T3.3,System Planning and Acceptance,T3 Operations Management,A.8.6; A.8.29,,high,P3; P4
+T3.4,Protection From Malware,T3 Operations Management,A.8.7,,high,P1
+T3.5,Backup,T3 Operations Management,A.8.13,,high,P1
+T3.6,Monitoring,T3 Operations Management,A.8.15; A.8.16; A.8.17,,high,P1; P2; P3; P4
+T4.1,Communications Policy,T4 Communications,A.5.1; A.5.14,,medium,P3
+T4.2,Information Transfer,T4 Communications,A.5.14; A.7.10,,medium,P2; P3; P4
+T4.3,Electronic Commerce Services,T4 Communications,A.5.14; A.8.26,,medium,P2; P3; P4
+T4.4,Information Sharing Protection,T4 Communications,A.5.6; A.5.14,,medium,P4
+T4.5,Network Security Management,T4 Communications,A.8.20; A.8.21; A.8.22,,high,P1; P2
+T5.1,Access Control Policy,T5 Access Control,A.5.15,,high,P2
+T5.2,User Access Management,T5 Access Control,A.5.16; A.5.17; A.5.18; A.8.2,,high,P1
+T5.3,User Responsibilities,T5 Access Control,A.5.17,,high,P1
+T5.4,Network Access Control,T5 Access Control,A.5.15; A.8.5; A.8.20; A.8.22,,medium,P1; P2; P3; P4
+T5.5,Operating System Access Control,T5 Access Control,A.5.16; A.5.17; A.8.5; A.8.18,,high,P1; P4
+T5.6,Application and Information Access Control,T5 Access Control,A.8.3; A.8.22,,medium,P1; P2; P3
+T5.7,Mobile Devices Access Control,T5 Access Control,A.6.7; A.8.1,,high,P4
+T6.1,Third Party Security Policy,T6 Third-Party Security,A.5.19,,high,P4
+T6.2,Third Party Service Delivery Management,T6 Third-Party Security,A.5.20; A.5.22,,high,P2
+T6.3,Cloud Computing,T6 Third-Party Security,A.5.23,,high,P2
+T7.1,"Information Systems Acquisition, Development and Maintenance Policy","T7 Information Systems Acquisition, Development and Maintenance",A.5.1; A.8.25,,medium,P4
+T7.2,Security Requirements of Information Systems,"T7 Information Systems Acquisition, Development and Maintenance",A.8.26; A.8.27,,high,P3; P4
+T7.3,Correct Processing in Applications,"T7 Information Systems Acquisition, Development and Maintenance",A.8.26; A.8.28,,medium,P2
+T7.4,Cryptographic Controls,"T7 Information Systems Acquisition, Development and Maintenance",A.8.24,,high,P2
+T7.5,Security of System Files,"T7 Information Systems Acquisition, Development and Maintenance",A.8.4; A.8.19; A.8.33,,high,P3; P4
+T7.6,Security in Development and Support Processes,"T7 Information Systems Acquisition, Development and Maintenance",A.8.12; A.8.25; A.8.29; A.8.30; A.8.32,,medium,P2; P3
+T7.7,Technical Vulnerability Management,"T7 Information Systems Acquisition, Development and Maintenance",A.8.8,,high,P1
+T7.8,Supply Chain Management,"T7 Information Systems Acquisition, Development and Maintenance",A.5.21; A.5.22,,medium,P3; P4
+T8.1,Information Security Incident Management Policy,T8 Information Security Incident Management,A.5.24,,high,P2
+T8.2,Management of Information Security Incidents and Improvements,T8 Information Security Incident Management,A.5.24; A.5.25; A.5.26; A.5.27; A.5.28,,high,P2; P4
+T8.3,Information Security Events and Weaknesses Reporting,T8 Information Security Incident Management,A.5.7; A.6.8,,medium,P4
+T9.1,Information Systems Continuity Management Policy,T9 Information Systems Continuity Management,A.5.29; A.5.30,,medium,P4
+T9.2,Information Security Aspects of Information Continuity,T9 Information Systems Continuity Management,A.5.29; A.5.30; A.8.14,,high,P3
+T9.3,"Testing, Maintaining and Reassessing Plans",T9 Information Systems Continuity Management,A.5.30,,high,P3

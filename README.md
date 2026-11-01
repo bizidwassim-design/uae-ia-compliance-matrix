@@ -4,7 +4,7 @@
 
 [![Demo](https://img.shields.io/badge/demo-open%20the%20live%20app-2F80ED?style=for-the-badge&logo=githubpages&logoColor=white)](https://bizidwassim-design.github.io/uae-ia-compliance-matrix/)
 
-A free, open-source **compliance matrix for the UAE Information Assurance (IA) Standard**: the 15 control families
+A free, open-source **compliance matrix for the UAE Information Assurance Regulation (IAR) v1.1 (TDRA, March 2020)**: the 15 control families
 (M1–M6 management, T1–T9 technical) with status, owner, target date and evidence per row, a compliance score,
 per-family progress bars, a prioritised gap list, and mappings to **ISO/IEC 27001:2022** and **NIST CSF 2.0**.
 One static page: no build, no server, no account, no telemetry. Open `index.html` and start.
@@ -18,7 +18,7 @@ One static page: no build, no server, no account, no telemetry. Open `index.html
 
 ## Who it is for
 
-Organisations in the UAE that must demonstrate alignment with the IA Standard, and teams that already run an
+Organisations in the UAE that must demonstrate alignment with the IA Regulation, and teams that already run an
 ISO 27001 or NIST CSF programme and need to show where the two overlap. The matrix is a working document for the
 security manager and an evidence index for the assessor; it does not replace the official standard or an audit.
 
@@ -81,17 +81,28 @@ and included in the JSON export.
 
 ## Mappings
 
-Each family carries the ISO/IEC 27001:2022 Annex A controls (and management-system clauses) and the NIST CSF 2.0
-categories that cover the same ground. They are this project's own reading, built at family level, and meant as
-a starting point for a crosswalk, not as an authoritative mapping. [docs/framework-notes.md](docs/framework-notes.md)
-explains the rules used and what to check against the official text.
+Mappings are **derived, not hand-written**: each family carries the union of the ISO/IEC 27001:2022 Annex A
+controls and ISMS clauses that the verified UAE IAR overlay of the
+[GRC Control Crosswalk](https://github.com/bizidwassim-design/grc-control-crosswalk) gives for its sub-families, and
+the NIST CSF 2.0 categories of those controls. *Work at the 66 IAR v1.1 sub-families* loads the sub-families
+themselves with the same mappings. `scripts/check_controls.js` fails if any of this drifts from the snapshot.
+
+## Validation
+
+| Document | What it records |
+|----------|-----------------|
+| [docs/framework-notes.md](docs/framework-notes.md) | Source, edition (IAR v1.1, March 2020), URL and access date; how mappings are derived; dated log of source and mapping changes |
+| [docs/limitations.md](docs/limitations.md) | What the matrix does not tell you |
+| [docs/review.md](docs/review.md) | Independent review status (none recorded yet) and how to record one |
+| [examples/falcon-bay-worked-example.md](examples/falcon-bay-worked-example.md) | Dated fictional worked example (assessment date 2026-10-20) with method, results and gap order; its figures are checked against the sample in CI |
+| `scripts/check_controls.js` | Run in CI: family names match the IAR, family mappings equal the derivation from the crosswalk snapshot, sub-family catalogue current, worked-example figures match |
 
 ## Export format
 
 ```json
 {
   "schema": "uae-ia-compliance-matrix/1.0",
-  "framework": "UAE Information Assurance Standard",
+  "framework": "UAE Information Assurance Regulation v1.1 (TDRA, March 2020)",
   "organisation": "Falcon Bay Logistics FZ-LLC",
   "assessment_date": "2026-10-20",
   "compliance_score": 50,
@@ -150,7 +161,7 @@ data is fictional.
 
 ## 🇫🇷 Résumé
 
-Matrice de conformité **open source pour la norme UAE Information Assurance** : les 15 familles de contrôles
+Matrice de conformité **open source pour la UAE Information Assurance Regulation v1.1 (TDRA)** : les 15 familles de contrôles
 (M1–M6 management, T1–T9 techniques) avec statut, responsable, échéance et preuves par ligne, score de conformité,
 barres de progression par famille, liste des écarts priorisés, et correspondances avec ISO/IEC 27001:2022 et
 NIST CSF 2.0. Page web statique sans serveur ni dépendance ; import de votre propre liste de contrôles (CSV),

@@ -19,17 +19,17 @@ jobs:
 
       - name: Syntax-check every script
         run: |
-          for f in assets/app.js data/controls.js data/sample.js scripts/*.js; do
+          for f in assets/app.js data/controls.js data/sample.js data/subfamilies.js scripts/*.js; do
             node --check "$f"
           done
 
-      - name: Catalogue has 15 families with complete mappings and a complete sample
+      - name: Catalogue consistent with the crosswalk snapshot, complete sample, worked example figures match
         run: node scripts/check_controls.js
 
       - name: Generated CSV and sample export are up to date
         run: |
           node scripts/build_data.js
-          git diff --exit-code -- data/controls.csv examples/falcon-bay-sample.json
+          git diff --exit-code -- data/controls.csv data/subfamilies.js examples/falcon-bay-sample.json
 
       - name: HTML is valid (html-validate, recommended preset)
         run: npx --yes html-validate@8 index.html

@@ -8,7 +8,7 @@ documentation.
 
 * **Fictional data only.** The sample uses a made-up company (Falcon Bay Logistics FZ-LLC). Never commit a real
   assessment, real people, hostnames or internal details.
-* **Original content.** Reference the UAE IA Standard, ISO/IEC 27001 and NIST CSF by name and identifier; never
+* **Original content.** Reference the UAE IA Regulation, ISO/IEC 27001 and NIST CSF by name and identifier; never
   paste their text. The standard's control statements stay out of this repository.
 * **No build step, no dependencies, no network.** The app must keep working when opened as a local file with the
   Content-Security-Policy in `index.html` unchanged: no external scripts, styles, fonts or fetches.

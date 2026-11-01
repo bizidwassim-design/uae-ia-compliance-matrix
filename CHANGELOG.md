@@ -5,6 +5,16 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- *Work at the 66 IAR v1.1 sub-families*: the regulation's sub-families with priorities and mappings (`data/subfamilies.js`, generated).
+- Snapshots of the crosswalk data the matrix depends on: `data/iar-v1.1-subfamilies.csv`, `data/iso27001-to-nist-csf.csv`.
+- Dated fictional worked example `examples/falcon-bay-worked-example.md`; `docs/limitations.md`; `docs/review.md` (no review recorded yet).
+- `scripts/check_controls.js` now checks family names against the IAR, family mappings against the crosswalk derivation, the sub-family catalogue and the worked-example figures.
+
+### Changed
+- The regulation is named as the UAE Information Assurance Regulation v1.1 (TDRA, March 2020); family names follow it exactly (catalogue `families-1.1`).
+- Family ISO/IEC 27001 and NIST CSF mappings replaced by values derived from the verified IAR overlay of grc-control-crosswalk 1.1.0 (see `docs/framework-notes.md`, "Source and mapping changes").
+
 ### Changed
 - The first visit opens on the fictional sample, with a banner and a *Start with a blank assessment* button that is remembered, so visitors see real-looking results straight away.
 

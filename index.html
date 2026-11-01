@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Compliance matrix for the UAE Information Assurance Standard: status, owner, evidence and gaps per control family, with ISO/IEC 27001 and NIST CSF 2.0 mappings. Runs entirely in your browser.">
+  <meta name="description" content="Compliance matrix for the UAE Information Assurance Regulation v1.1 (TDRA): status, owner, evidence and gaps per family or per sub-family, with ISO/IEC 27001:2022 and NIST CSF 2.0 mappings derived from a verified crosswalk. Runs entirely in your browser.">
   <meta name="color-scheme" content="light dark">
   <title>UAE IA Compliance Matrix</title>
   <link rel="stylesheet" href="assets/style.css">
@@ -16,7 +16,7 @@
     <div class="wrap header-row">
       <div>
         <h1>UAE IA Compliance Matrix</h1>
-        <p class="tagline">UAE Information Assurance Standard · 15 control families · mapped to ISO/IEC 27001:2022 and NIST CSF 2.0. Nothing leaves your browser.</p>
+        <p class="tagline">UAE Information Assurance Regulation v1.1 (TDRA, March 2020) · 15 families and 66 sub-families · mapped to ISO/IEC 27001:2022 and NIST CSF 2.0. Nothing leaves your browser.</p>
       </div>
       <div class="header-actions">
         <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">Dark theme</button>
@@ -37,13 +37,18 @@
         this browser until you reset it. Export JSON to keep a dated record, or CSV to work in a spreadsheet.
       </p>
       <p>
-        The matrix ships at family level. To work control by control, import the control list from your copy of the
-        standard with <strong>Import controls (CSV)</strong>; the template is in
-        <a href="templates/controls-import-template.csv">templates/</a>. Read
-        <a href="docs/framework-notes.md">the framework notes</a> for the mapping rules.
+        The matrix opens at family level. <strong>Work at the 66 IAR v1.1 sub-families</strong> replaces the families
+        with the regulation's sub-families (identifiers, short titles, priorities and mappings), or import your own
+        control list with <strong>Import controls (CSV)</strong> (<a href="templates/controls-import-template.csv">template</a>).
+        Mappings are derived from the verified UAE IAR overlay of the
+        <a href="https://bizidwassim-design.github.io/grc-control-crosswalk/" target="_blank" rel="noopener noreferrer">GRC Control Crosswalk</a>.
+        Read the <a href="https://github.com/bizidwassim-design/uae-ia-compliance-matrix/blob/main/docs/framework-notes.md" target="_blank" rel="noopener noreferrer">sources and mapping rules</a>,
+        the <a href="https://github.com/bizidwassim-design/uae-ia-compliance-matrix/blob/main/docs/limitations.md" target="_blank" rel="noopener noreferrer">limitations</a> and the
+        <a href="https://github.com/bizidwassim-design/uae-ia-compliance-matrix/blob/main/examples/falcon-bay-worked-example.md" target="_blank" rel="noopener noreferrer">dated worked example</a>.
       </p>
       <p class="sample-row">
         <button type="button" id="btn-sample" class="btn">Load the Falcon Bay Logistics sample</button>
+        <button type="button" id="btn-subfamilies" class="btn">Work at the 66 IAR v1.1 sub-families</button>
         <span class="muted">Fictional statuses, to see what a filled matrix looks like.</span>
       </p>
     </section>
@@ -115,11 +120,12 @@
   </main>
 
   <footer class="site-footer wrap">
-    <p>Open source under the MIT License. Family names are those of the UAE IA Standard; mappings and evidence hints are this project's own and should be verified against the official text. No data is transmitted: the page's Content-Security-Policy blocks all network requests.</p>
+    <p>Open source under the MIT License. Family and sub-family names follow the UAE IA Regulation v1.1 (TDRA); mappings come from an expert-judgement crosswalk that has not yet been independently reviewed, and must be checked against the official text. No data is transmitted: the page's Content-Security-Policy blocks all network requests.</p>
   </footer>
 
   <script src="data/controls.js"></script>
   <script src="data/sample.js"></script>
+  <script src="data/subfamilies.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>
