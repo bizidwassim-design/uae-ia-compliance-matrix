@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Syntax-check every script
+        run: |
+          for f in assets/app.js data/controls.js data/sample.js scripts/*.js; do
+            node --check "$f"
+          done
+
+      - name: Catalogue has 15 families with complete mappings and a complete sample
+        run: node scripts/check_controls.js
+
+      - name: Generated CSV and sample export are up to date
+        run: |
+          node scripts/build_data.js
+          git diff --exit-code -- data/controls.csv examples/falcon-bay-sample.json
+
+      - name: HTML is valid (html-validate, recommended preset)
+        run: npx --yes html-validate@8 index.html
+
+      - name: No external resources or inline scripts (CSP stays meaningful)
+        run: |
+          ! grep -Ei '<(script|link)[^>]+(src|href)="(https?:)?//' index.html
+          ! grep -Ei '<script>' index.html
+          ! grep -Ei '@import|url\(https?:' assets/style.css
+          echo "OK: all resources are local"
