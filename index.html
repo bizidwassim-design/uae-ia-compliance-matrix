@@ -7,30 +7,34 @@
   <meta name="description" content="Compliance matrix for the UAE Information Assurance Regulation v1.1 (TDRA): status, owner, evidence and gaps per family or per sub-family, with ISO/IEC 27001:2022 and NIST CSF 2.0 mappings derived from a verified crosswalk. Runs entirely in your browser.">
   <meta name="color-scheme" content="light dark">
   <title>UAE IA Compliance Matrix</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=uae-jewel-20261101">
 </head>
 <body>
   <a class="skip-link" href="#matrix">Skip to the matrix</a>
 
   <header class="site-header">
     <div class="wrap header-row">
-      <div>
-        <h1>UAE IA Compliance Matrix</h1>
-        <p class="tagline">UAE Information Assurance Regulation v1.1 (TDRA, March 2020) · 15 families and 66 sub-families · mapped to ISO/IEC 27001:2022 and NIST CSF 2.0. Nothing leaves your browser.</p>
-      </div>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">IA</span><div><p class="brand-name">Assurance<span>Atlas</span></p><p class="brand-caption">UAE INFORMATION ASSURANCE</p></div></div>
       <div class="header-actions">
+        <span class="local-badge">● Browser-local workspace</span>
         <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">Dark theme</button>
       </div>
     </div>
   </header>
 
   <main class="wrap">
+    <div class="hero">
+      <div><p class="eyebrow">GOVERNANCE · RISK · COMPLIANCE</p><h1>UAE IA Compliance Matrix</h1><p class="tagline">Turn control requirements into a clear assurance story.</p><p class="hero-description">Track implementation, evidence and ownership. See the gaps that matter—and keep your next review in focus.</p></div>
+      <div class="hero-emblem" aria-hidden="true"><span>IA</span><small>ASSURANCE<br>BY DESIGN</small></div>
+    </div>
+    <div class="framework-strip" role="group" aria-label="Framework references"><span>UAE IAR v1.1 · TDRA · March 2020</span><span>15 families</span><span>66 sub-families</span><span>ISO 27001:2022</span><span>NIST CSF 2.0</span></div>
+    <nav class="section-nav" aria-label="Workspace sections"><a href="#assessment">01 <span>Assessment</span></a><a href="#overview">02 <span>Overview</span></a><a href="#matrix">03 <span>Control matrix</span></a><a href="#priorities">04 <span>Priority gaps</span></a><a href="#reports">05 <span>Reports &amp; data</span></a></nav>
     <div class="demo-banner" id="demo-banner" role="status" hidden>
       <span><strong>Fictional sample data.</strong> This demo opens on the fictional Falcon Bay Logistics matrix so you can see what the results look like.</span>
       <button type="button" id="btn-start-blank" class="btn">Start with a blank assessment</button>
     </div>
-    <section class="card intro" aria-labelledby="how-title">
-      <h2 id="how-title">How it works</h2>
+    <details class="card intro">
+      <summary>Quick start &amp; methodology <span> · Sources, mapping rules and sample data</span></summary>
       <p>
         For each control family, record the implementation status, the owner, a target date and the evidence you could
         show an assessor. The summary, the gap list and the per-family bars update as you type, and a draft is kept in
@@ -51,10 +55,10 @@
         <button type="button" id="btn-subfamilies" class="btn">Work at the 66 IAR v1.1 sub-families</button>
         <span class="muted">Fictional statuses, to see what a filled matrix looks like.</span>
       </p>
-    </section>
+    </details>
 
-    <section class="card" aria-labelledby="org-title">
-      <h2 id="org-title">Assessment</h2>
+    <section class="card assessment-card" id="assessment" aria-labelledby="org-title">
+      <p class="eyebrow">01 / SET THE CONTEXT</p><h2 id="org-title">Assessment workspace</h2>
       <div class="field-grid">
         <label>Organisation <input type="text" id="org" autocomplete="organization" placeholder="Organisation name"></label>
         <label>Assessment date <input type="date" id="date"></label>
@@ -62,15 +66,15 @@
       </div>
     </section>
 
-    <section class="card summary" aria-labelledby="summary-title" aria-live="polite">
-      <h2 id="summary-title">Summary</h2>
+    <section class="card summary" id="overview" aria-labelledby="summary-title" aria-live="polite">
+      <p class="eyebrow">02 / YOUR ASSURANCE POSTURE</p><h2 id="summary-title">Compliance at a glance</h2>
       <div class="kpis" id="kpis"></div>
       <div class="bars" id="bars"></div>
     </section>
 
     <section class="card" id="matrix" aria-labelledby="matrix-title">
       <div class="toolbar">
-        <h2 id="matrix-title">Matrix</h2>
+        <div><p class="eyebrow">03 / FROM REQUIREMENT TO EVIDENCE</p><h2 id="matrix-title">Control matrix</h2></div>
         <div class="toolbar-actions">
           <label class="inline">Group <select id="filter-group"><option value="">All</option><option value="management">Management (M)</option><option value="technical">Technical (T)</option></select></label>
           <label class="inline">Status <select id="filter-status"><option value="">All</option></select></label>
@@ -99,14 +103,14 @@
       </div>
     </section>
 
-    <section class="card" aria-labelledby="gaps-title">
-      <h2 id="gaps-title">Gaps to close first</h2>
+    <section class="card gaps-card" id="priorities" aria-labelledby="gaps-title">
+      <p class="eyebrow">04 / FOCUS YOUR NEXT MOVE</p><h2 id="gaps-title">Gaps to close first</h2>
       <p class="muted">Items that are not implemented, ordered by priority then by status. Not-applicable items are excluded.</p>
       <ol id="gaps" class="gaps"></ol>
     </section>
 
-    <section class="card actions" aria-labelledby="actions-title">
-      <h2 id="actions-title">Save, load, print</h2>
+    <section class="card actions" id="reports" aria-labelledby="actions-title">
+      <p class="eyebrow">05 / KEEP A DATED RECORD</p><h2 id="actions-title">Reports &amp; data</h2>
       <div class="btn-row">
         <button type="button" id="btn-export" class="btn btn-primary">Export JSON</button>
         <button type="button" id="btn-export-csv" class="btn">Export CSV</button>
@@ -120,6 +124,7 @@
   </main>
 
   <footer class="site-footer wrap">
+    <p class="signature">AssuranceAtlas <span> / </span> A GRC toolkit by Wassim Bizid</p>
     <p>Open source under the MIT License. Family and sub-family names follow the UAE IA Regulation v1.1 (TDRA); mappings come from an expert-judgement crosswalk that has not yet been independently reviewed, and must be checked against the official text. No data is transmitted: the page's Content-Security-Policy blocks all network requests.</p>
   </footer>
 
@@ -129,3 +134,4 @@
   <script src="assets/app.js"></script>
 </body>
 </html>
+

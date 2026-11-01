@@ -302,7 +302,7 @@
       renderAll(); say("Matrix reset.");
     });
     var saved = null; try { saved = localStorage.getItem("uae-ia-theme"); } catch (e) { /* ignore */ }
-    applyTheme(saved);
+    applyTheme(saved || "dark");
     $("#theme-toggle").addEventListener("click", function () {
       var cur = document.documentElement.getAttribute("data-theme");
       var dark = cur === "dark" || (!cur && window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -315,3 +315,4 @@
   }
   document.addEventListener("DOMContentLoaded", init);
 })();
+
