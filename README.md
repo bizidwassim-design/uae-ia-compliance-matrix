@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![CI](https://github.com/bizidwassim-design/uae-ia-compliance-matrix/actions/workflows/ci.yml/badge.svg)](https://github.com/bizidwassim-design/uae-ia-compliance-matrix/actions/workflows/ci.yml) [![Live](https://img.shields.io/badge/live-GitHub%20Pages-0f6e56)](https://bizidwassim-design.github.io/uae-ia-compliance-matrix/) [![Fictional data](https://img.shields.io/badge/sample%20data-fictional-informational)](SECURITY.md)
 
+[![Demo](https://img.shields.io/badge/demo-open%20the%20live%20app-2F80ED?style=for-the-badge&logo=githubpages&logoColor=white)](https://bizidwassim-design.github.io/uae-ia-compliance-matrix/)
+
 A free, open-source **compliance matrix for the UAE Information Assurance (IA) Standard**: the 15 control families
 (M1–M6 management, T1–T9 technical) with status, owner, target date and evidence per row, a compliance score,
 per-family progress bars, a prioritised gap list, and mappings to **ISO/IEC 27001:2022** and **NIST CSF 2.0**.
